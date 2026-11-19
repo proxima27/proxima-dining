@@ -146,3 +146,35 @@ test("newsletter and contact reach the staff inbox", async ({ page: p }) => {
     await expect(p.getByText("No matching records.")).toBeVisible();
   }
 });
+
+test('an open staff inbox receives a visitor message without reloading', async ({page: staff, browser}) => {
+  test.setTimeout(40000);
+  const ctx = await browser.newContext({baseURL: 'http://127.0.0.1:5173'});
+  const visitor = await ctx.newPage();
+  const subject = 'Inbox delivery ' + Date.now();
+  await staff.goto('/admin');
+  await staff.getByLabel('Username').fill('admin');
+  await staff.getByLabel('Password').fill('admin123');
+  await staff.getByRole('button',{name:'Sign in'}).click();
+  await staff.locator('aside').getByRole('link',{name:/Contact messages/}).click();
+  await staff.getByRole('textbox').fill(subject);
+  await expect(staff.getByText('No matching records.')).toBeVisible();
+  await visitor.goto('/contact');
+  for (const [label,value] of [['Name','Inbox test'],['Email address','inbox-test@example.org'],['Subject',subject],['Message','Please check the seasonal menu.']]) await visitor.getByLabel(label,{exact:true}).fill(value);
+  await visitor.getByRole('button',{name:'Send message'}).click();
+  await expect(visitor.getByRole('status')).toContainText('received');
+  expect((await ctx.request.get('/api/v1/admin/messages/summary')).status()).toBe(401);
+  await staff.bringToFront();
+  await expect(staff.locator('.recordlist')).toContainText(subject,{timeout:16000});
+  await expect(staff.locator('.recordlist')).toContainText('Unread');
+  await expect(staff.locator('aside .inboxbadge')).toBeVisible();
+  await staff.getByRole('button',{name:'Read',exact:true}).click();
+  await expect(staff.getByRole('dialog')).toContainText('Please check the seasonal menu.');
+  await expect(staff.getByRole('dialog')).toContainText('inbox-test@example.org');
+  await staff.getByRole('button',{name:'Close'}).click();
+  await expect(staff.locator('.recordlist')).toContainText('Inbox test · Read');
+  staff.once('dialog',d=>d.accept());
+  await staff.getByRole('button',{name:'Delete Inbox test'}).click();
+  await expect(staff.getByText('No matching records.')).toBeVisible();
+  await ctx.close();
+});

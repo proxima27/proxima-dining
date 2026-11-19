@@ -9,8 +9,9 @@ export function Manage({ kind }) {
     [q, Q] = useState(""),
     [msg, M] = useState(""),
     [opened, O] = useState(null);
-  const r = useData("/admin/" + kind, rev),
-    { mutate } = useStaff();
+  const { mutate, inbox, refreshInbox } = useStaff();
+  const inboxVersion = kind === "messages" ? `${inbox?.total}:${inbox?.unread}:${inbox?.latest}` : "";
+  const r = useData("/admin/" + kind, `${rev}:${inboxVersion}`);
   const msgList = kind === "messages",
     subs = kind === "newsletter",
     editable = !subs && !msgList;
@@ -21,16 +22,18 @@ export function Manage({ kind }) {
       await mutate("delete", kind + "/" + x.id);
       M("Record deleted.");
       O(null);
-      V(rev + 1);
+      if (msgList) refreshInbox();
+      V(i => i + 1);
     } catch (e) {
       M(errText(e));
     }
   }
   async function read(x) {
     try {
-      await mutate("patch", "messages/" + x.id);
-      O(x);
-      V(rev + 1);
+      const response = await mutate("patch", "messages/" + x.id);
+      O(response.data);
+      refreshInbox();
+      V(i => i + 1);
     } catch (e) {
       M(errText(e));
     }
@@ -63,7 +66,7 @@ export function Manage({ kind }) {
   }
   return (
     <>
-      <SectionHead k="CONTENT MANAGEMENT" title={names[kind]} />
+      <SectionHead k={msgList ? "STAFF INBOX" : "CONTENT MANAGEMENT"} title={names[kind]} sub={msgList ? "Messages sent through the public contact form appear here, newest first. This inbox refreshes automatically." : undefined} />
       <div className="actionrow">
         <input
           aria-label={"Search " + names[kind]}
@@ -71,6 +74,7 @@ export function Manage({ kind }) {
           value={q}
           onChange={(e) => Q(e.target.value)}
         />
+        {msgList && <button className="btn" onClick={() => {refreshInbox(); V(i=>i+1)}}>Refresh inbox</button>}
         {editable && (
           <Link className="gold" to={"/admin/" + kind + "/new"}>
             <Plus size={15} />
@@ -87,7 +91,7 @@ export function Manage({ kind }) {
       {!r.data ? (
         <Status r={r} />
       ) : !list.length ? (
-        <div className="empty">No matching records.</div>
+        <div className="empty">{msgList && !q ? "No contact messages yet." : "No matching records."}</div>
       ) : (
         <div className="recordlist">
           {list.map((x) => (

@@ -6,6 +6,7 @@ from typing import Literal
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from PIL import Image
 from pydantic import Field, model_validator
+from sqlalchemy import case, func
 
 from app.core.security import authorized
 from app.database.connection import db_session
@@ -43,6 +44,16 @@ types = {
     "messages": Message,
     "newsletter": Subscriber,
 }
+
+
+@api.get("/messages/summary")
+def message_summary(db=D):
+    total, unread, latest = db.query(
+        func.count(Message.id),
+        func.count(case((Message.is_read.is_(False), 1))),
+        func.max(Message.id),
+    ).one()
+    return {"total": total, "unread": unread, "latest": latest}
 
 
 @api.get("/dashboard")

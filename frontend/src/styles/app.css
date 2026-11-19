@@ -1387,3 +1387,5 @@ footer {
   margin-top: 12px;
   border-radius: 4px;
 }
+
+.inboxbadge{margin-inline-start:.45em;display:inline-block;padding:0 .45em;border-radius:1em;background:#b89560;color:#171717;font-size:.8em;font-weight:600}

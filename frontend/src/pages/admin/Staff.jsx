@@ -54,6 +54,16 @@ export function Staff() {
     );
     return () => api.interceptors.response.eject(id);
   }, []);
+  const [inboxTick, setInboxTick] = useState(0);
+  const refreshInbox = () => setInboxTick(t => t + 1);
+  const inbox = useData(auth ? "/admin/messages/summary" : null, inboxTick).data;
+  useEffect(() => {
+    if (!auth) return;
+    function poll() { if (!document.hidden) refreshInbox(); }
+    const timer = window.setInterval(poll, 10000);
+    document.addEventListener("visibilitychange", poll);
+    return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
+  }, [auth]);
   async function login(e) {
     e.preventDefault();
     B(true);
@@ -114,7 +124,7 @@ export function Staff() {
   const mutate = (method, url, data) =>
     api.request({ method, url: "/admin/" + url, data, headers });
   return (
-    <C.Provider value={{ mutate }}>
+    <C.Provider value={{ mutate, inbox, refreshInbox }}>
       <header>
         <div className="wrap navwrap">
           <Brand />
@@ -130,7 +140,7 @@ export function Staff() {
           <NavLink to="/admin/dashboard">Overview</NavLink>
           {Object.entries(names).map(([k, n]) => (
             <NavLink key={k} to={"/admin/" + k}>
-              {n}
+              {n}{k === "messages" && inbox?.unread > 0 && <span className="inboxbadge" aria-label={`${inbox.unread} unread`}>{inbox.unread}</span>}
             </NavLink>
           ))}
           <button
@@ -186,6 +196,7 @@ export function Staff() {
   );
 }
 function Dashboard() {
+  const { inbox } = useStaff();
   const r = useData("/admin/dashboard");
   return (
     <>
@@ -199,9 +210,9 @@ function Dashboard() {
           {Object.entries(r.data).map(([k, n]) => (
             <Link key={k} to={"/admin/" + k}>
               <small>{names[k]}</small>
-              <h2>{n}</h2>
+              <h2>{k === "messages" ? inbox?.total ?? n : n}</h2>
               <span>
-                Manage <ArrowRight size={14} />
+                {k === "messages" && inbox?.unread ? `${inbox.unread} unread · Open inbox` : "Manage"} <ArrowRight size={14} />
               </span>
             </Link>
           ))}

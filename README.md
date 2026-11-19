@@ -79,3 +79,5 @@ npm run build
 ```
 
 Verified in the workspace: real MySQL 8.4, Python 3.13, migrated schema, 18 backend checks and five Chromium browser journeys. See the phase report for tested scope and release limitations.
+
+**Staff contact inbox:** after a visitor submits `/contact`, the message is stored in MySQL. Sign in at `/admin` and choose **Contact messages** (`/admin/messages`). The unread badge and active inbox check for changes every ten seconds; **Refresh inbox** checks immediately. Opening a message marks it read. These messages are private to staff and are not forwarded to email.
