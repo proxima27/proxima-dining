@@ -9,7 +9,7 @@
 - **`/admin`** — development-only staff login: **admin / admin123**. Create a restaurant, assign its cuisine, check **Published**, save, and search its name in the public directory. **Featured** controls the curated homepage collection. The first three featured records populate the spotlight; the fourth supplies the editor’s selection.
 - **`/docs`** — the preview proxies to the backend Swagger UI. **`/api/v1/health`** checks database connectivity, not just process liveness.
 
-The sample contains **12 fictional restaurants, eight cuisines, five categories and 60 dishes**. Images and prices are illustrative. Unknown hours, addresses, coordinates and allergen details are not invented. No customer accounts, reservations, orders, payments or user reviews exist.
+The sample contains **20 fictional restaurants, 13 cuisines, nine categories and 120 dishes**. Images and prices are illustrative. Unknown hours, addresses, coordinates and allergen details are not invented. No customer accounts, reservations, orders, payments or user reviews exist.
 
 ## Repository
 

@@ -15,3 +15,6 @@
 
 ## Content accuracy
 Development entries and menus are fictional. Public footer identifies the demonstration collection. Venue photographs illustrate a mood and are not claims about verified businesses. No customer or editorial scores are invented; no historic popularity metrics are fabricated.
+
+## Second catalogue collection
+Eight more fictional restaurants and 60 menu items: six dishes per new venue plus one additional dish for each of the twelve original menus. New cuisines include Thai, Chinese, Vietnamese, Turkish and Egyptian; new category pages cover breakfast, noodles, seafood and soups. Current seeded totals: **20 restaurants, 13 cuisines, nine categories and 120 dishes**. `app.services.expand_catalogue` adds missing records by slug without resetting the database. The standard development seed includes it. Two consecutive imports produced no duplicates. The homepage now surfaces the latest restaurant additions and recently featured dishes. All 18 API checks and five browser journeys passed following the expansion. See `CATALOGUE-IMAGES.md` for new photo sources.

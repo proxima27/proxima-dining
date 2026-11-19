@@ -155,6 +155,7 @@ def category_detail(slug: str, db=D):
 @api.get("/menu-items", response_model=DishPage)
 def menu_items(
     category: str = "",
+    sort: Literal["catalogue", "newest"] = "catalogue",
     featured: bool | None = None,
     page: int = Query(1, ge=1),
     size: int = Query(12, ge=1, le=40),
@@ -167,7 +168,10 @@ def menu_items(
         q = q.filter(Item.is_featured == featured)
     return {
         "items": [
-            card(x) for x in q.order_by(Item.id).offset((page - 1) * size).limit(size)
+            card(x)
+            for x in q.order_by(Item.id.desc() if sort == "newest" else Item.id)
+            .offset((page - 1) * size)
+            .limit(size)
         ],
         "total": q.count(),
     }

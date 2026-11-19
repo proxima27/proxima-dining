@@ -6,6 +6,7 @@ from app.core.config import PROD
 from app.database.connection import Session
 from app.models.catalog import Category, Cuisine, Item, Restaurant, RestaurantImage
 from app.models.settings import Setting
+from app.services.expand_catalogue import expand
 
 slug = lambda text: re.sub("[^a-z0-9]+", "-", text.lower()).strip("-")
 photo = lambda k: "/images/" + k + ".jpg"
@@ -276,6 +277,7 @@ def seed():
                         is_published=True,
                     )
                 )
+        expand(db)
         if not db.query(Setting).count():
             db.add(
                 Setting(

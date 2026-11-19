@@ -48,7 +48,7 @@ test("search, filters, cuisine pages, categories and pagination", async ({
   await p.goto("/restaurants");
   await expect(p.locator(".card")).toHaveCount(9);
   await p.getByRole("button", { name: "Next page" }).click();
-  await expect(p.locator(".card")).toHaveCount(3);
+  await expect(p.locator(".card")).toHaveCount(9);
   await p.getByLabel("Countries").selectOption("Japan");
   await expect(p.locator(".card")).toHaveCount(2);
   await p.goto("/categories/desserts");

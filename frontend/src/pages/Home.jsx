@@ -33,7 +33,8 @@ const icons = {
 export function Home() {
   const feat = useData("/restaurants/featured"),
     cs = useData("/cuisines"),
-    ds = useData("/menu-items?featured=true&size=3"),
+    ds = useData("/menu-items?featured=true&sort=newest&size=3"),
+    latest = useData("/restaurants?sort=newest&size=3"),
     dest = useData("/restaurants/destinations");
   const [slide, S] = useState(0);
   const featured = feat.data?.slice(0, 3) || [],
@@ -153,6 +154,10 @@ export function Home() {
           />
           {ds.data ? <Grid items={ds.data.items} /> : <Status r={ds} />}
         </div>
+      </section>
+      <section className="wrap section">
+        <SectionHead k="FRESH IN THE DIRECTORY" title="New to the Guide" sub="Meet the latest additions to our dining collection." link="All new additions" to="/restaurants?sort=newest" />
+        {latest.data ? <Grid items={latest.data.items} /> : <Status r={latest}/>}
       </section>
       {feat.data?.[3] && (
         <section className="wrap section editorial">
