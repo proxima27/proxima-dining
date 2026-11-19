@@ -82,6 +82,7 @@ export function Public() {
             <p>{r.data?.footer_text}</p>
           </div>
           <div className="footlinks">
+            <a href="/photo-credits.html">Photo credits</a>
             {[
               ["instagram_url", "Instagram"],
               ["facebook_url", "Facebook"],

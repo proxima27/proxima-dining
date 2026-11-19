@@ -1,0 +1,234 @@
+{
+  "maison-laurent-herb-roasted-chicken": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-maison-laurent-herb-roasted-chicken.jpg"
+  },
+  "maison-laurent-onion-soup": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-maison-laurent-onion-soup.jpg"
+  },
+  "maison-laurent-market-greens": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-maison-laurent-market-greens.jpg"
+  },
+  "maison-laurent-vanilla-custard": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-maison-laurent-vanilla-custard.jpg"
+  },
+  "maison-laurent-blackcurrant-spritz": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-maison-laurent-blackcurrant-spritz.jpg"
+  },
+  "bella-napoli-tomato-bruschetta": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-bella-napoli-tomato-bruschetta.jpg"
+  },
+  "bella-napoli-burrata-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-bella-napoli-burrata-salad.jpg"
+  },
+  "bella-napoli-berry-panna-cotta": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-bella-napoli-berry-panna-cotta.jpg"
+  },
+  "bella-napoli-citrus-soda": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-bella-napoli-citrus-soda.jpg"
+  },
+  "sakura-house-miso-broth": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-sakura-house-miso-broth.jpg"
+  },
+  "sakura-house-sesame-greens": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-sakura-house-sesame-greens.jpg"
+  },
+  "sakura-house-matcha-custard": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-sakura-house-matcha-custard.jpg"
+  },
+  "sakura-house-iced-sencha": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-sakura-house-iced-sencha.jpg"
+  },
+  "spice-garden-smoky-jollof-rice": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-spice-garden-smoky-jollof-rice.jpg"
+  },
+  "spice-garden-plantain-bites": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-spice-garden-plantain-bites.jpg"
+  },
+  "spice-garden-garden-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-spice-garden-garden-salad.jpg"
+  },
+  "spice-garden-coconut-pudding": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-spice-garden-coconut-pudding.jpg"
+  },
+  "spice-garden-zobo-cooler": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-spice-garden-zobo-cooler.jpg"
+  },
+  "casa-verde-salsa-trio": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-casa-verde-salsa-trio.jpg"
+  },
+  "casa-verde-avocado-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-casa-verde-avocado-salad.jpg"
+  },
+  "casa-verde-cinnamon-flan": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-casa-verde-cinnamon-flan.jpg"
+  },
+  "casa-verde-lime-agua-fresca": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-casa-verde-lime-agua-fresca.jpg"
+  },
+  "the-burger-house-corn-fritters": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-the-burger-house-corn-fritters.jpg"
+  },
+  "the-burger-house-chopped-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-the-burger-house-chopped-salad.jpg"
+  },
+  "the-burger-house-berry-sundae": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-the-burger-house-berry-sundae.jpg"
+  },
+  "the-burger-house-lemon-soda": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-the-burger-house-lemon-soda.jpg"
+  },
+  "saffron-room-onion-pakora": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-saffron-room-onion-pakora.jpg"
+  },
+  "saffron-room-cucumber-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-saffron-room-cucumber-salad.jpg"
+  },
+  "saffron-room-rice-pudding": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-saffron-room-rice-pudding.jpg"
+  },
+  "saffron-room-mango-lassi": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-saffron-room-mango-lassi.jpg"
+  },
+  "olive-salt-lemon-herb-fish": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-olive-salt-lemon-herb-fish.jpg"
+  },
+  "olive-salt-whipped-feta": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-olive-salt-whipped-feta.jpg"
+  },
+  "olive-salt-village-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-olive-salt-village-salad.jpg"
+  },
+  "olive-salt-honey-yoghurt": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-olive-salt-honey-yoghurt.jpg"
+  },
+  "olive-salt-mint-lemonade": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-olive-salt-mint-lemonade.jpg"
+  },
+  "atelier-du-soir-herb-roasted-chicken": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-atelier-du-soir-herb-roasted-chicken.jpg"
+  },
+  "atelier-du-soir-onion-soup": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-atelier-du-soir-onion-soup.jpg"
+  },
+  "atelier-du-soir-market-greens": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-atelier-du-soir-market-greens.jpg"
+  },
+  "atelier-du-soir-vanilla-custard": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-atelier-du-soir-vanilla-custard.jpg"
+  },
+  "atelier-du-soir-blackcurrant-spritz": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-atelier-du-soir-blackcurrant-spritz.jpg"
+  },
+  "cortile-rosso-basil-farfalle": {
+    "old": "/images/pasta.jpg",
+    "new": "/images/rome-basil-farfalle.jpg"
+  },
+  "cortile-rosso-tomato-bruschetta": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-cortile-rosso-tomato-bruschetta.jpg"
+  },
+  "cortile-rosso-burrata-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-cortile-rosso-burrata-salad.jpg"
+  },
+  "cortile-rosso-berry-panna-cotta": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-cortile-rosso-berry-panna-cotta.jpg"
+  },
+  "cortile-rosso-citrus-soda": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-cortile-rosso-citrus-soda.jpg"
+  },
+  "kumo-table-salmon-maki": {
+    "old": "/images/sushi.jpg",
+    "new": "/images/journal-kumo-table-salmon-maki.jpg"
+  },
+  "kumo-table-miso-broth": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-kumo-table-miso-broth.jpg"
+  },
+  "kumo-table-sesame-greens": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-kumo-table-sesame-greens.jpg"
+  },
+  "kumo-table-matcha-custard": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/kyoto-matcha-custard.jpg"
+  },
+  "kumo-table-iced-sencha": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-kumo-table-iced-sencha.jpg"
+  },
+  "ember-court-smoky-jollof-rice": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-ember-court-smoky-jollof-rice.jpg"
+  },
+  "ember-court-plantain-bites": {
+    "old": "/images/bar.jpg",
+    "new": "/images/journal-ember-court-plantain-bites.jpg"
+  },
+  "ember-court-garden-salad": {
+    "old": "/images/salad.jpg",
+    "new": "/images/journal-ember-court-garden-salad.jpg"
+  },
+  "ember-court-coconut-pudding": {
+    "old": "/images/dessert.jpg",
+    "new": "/images/journal-ember-court-coconut-pudding.jpg"
+  },
+  "ember-court-zobo-cooler": {
+    "old": "/images/terrace.jpg",
+    "new": "/images/journal-ember-court-zobo-cooler.jpg"
+  },
+  "spice-garden-golden-akara": {
+    "old": "/images/akara-breakfast.jpg",
+    "new": "/images/journal-spice-garden-golden-akara.jpg"
+  },
+  "casa-verde-pepper-chickpea-fajitas": {
+    "old": "/images/plate-52870.jpg",
+    "new": "/images/journal-casa-verde-pepper-chickpea-fajitas.jpg"
+  },
+  "olive-salt-tomato-baked-butter-beans": {
+    "old": "/images/plate-53012.jpg",
+    "new": "/images/journal-olive-salt-tomato-baked-butter-beans.jpg"
+  }
+}

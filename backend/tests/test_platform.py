@@ -273,3 +273,47 @@ def test_settings_messages(staff):
     msg = c.get(A + "/messages").json()[0]
     assert c.patch(f"{A}/messages/{msg['id']}").json()["is_read"]
     assert c.delete(f"{A}/messages/{msg['id']}").status_code == 200
+
+
+def test_individual_dish_images_and_regional_menus(state):
+    from pathlib import Path
+    from hashlib import sha256
+    from app.models.catalog import Item
+
+    c, s = state
+    urls = [url for (url,) in s.query(Item.image_url)]
+    assert len(urls) == len(set(urls))
+    assets = Path(__file__).resolve().parents[2] / "frontend/public"
+    demo_files = [
+        assets / url.lstrip("/") for url in urls if url.startswith("/images/")
+    ]
+    assert len({sha256(path.read_bytes()).digest() for path in demo_files}) == len(
+        demo_files
+    )
+    garri = c.get(P + "/restaurants/the-garri-bowl/menu").json()
+    assert {x["name"] for x in garri} >= {
+        "Soaked Garri with Groundnuts",
+        "Yellow Eba & Egusi Soup",
+    }
+    pizzas = c.get(P + "/menu-items?category=pizza").json()["items"]
+    assert len(pizzas) >= 6 and all(x["currency"] == "EUR" for x in pizzas)
+    for dish in garri + pizzas:
+        assert (
+            c.get(P + "/menu-items/" + dish["slug"]).json()["image_url"]
+            == dish["image_url"]
+        )
+
+
+def test_reused_dish_photo_rejected(staff):
+    m = staff.get(A + "/menu-items").json()[0]
+    r = staff.post(
+        A + "/menu-items",
+        json={
+            "name": "Test duplicate photo",
+            "slug": "test-dupe-photo",
+            "image_url": m["image_url"],
+            "category_id": m["category_id"],
+            "restaurant_id": m["restaurant_id"],
+        },
+    )
+    assert r.status_code == 409

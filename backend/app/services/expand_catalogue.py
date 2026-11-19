@@ -20,16 +20,16 @@ def image(key):
     return f"/images/{key}.jpg"
 
 
-def expand(db):
+def expand(db, collection="catalogue_expansion.json", category_offset=5):
     if PROD:
         raise RuntimeError("The fictional catalogue is for development only.")
-    data = json.loads(Path(__file__).with_name("catalogue_expansion.json").read_text())
+    data = json.loads(Path(__file__).with_name(collection).read_text())
 
     def find(model, key):
         return db.query(model).filter_by(slug=key).first()
 
     for position, (name, (description, cover)) in enumerate(
-        data["categories"].items(), 5
+        data["categories"].items(), category_offset
     ):
         if not find(Category, slug(name)):
             db.add(

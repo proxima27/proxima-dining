@@ -178,3 +178,17 @@ test('an open staff inbox receives a visitor message without reloading', async (
   await expect(staff.getByText('No matching records.')).toBeVisible();
   await ctx.close();
 });
+
+test('Nigerian dishes and pizzas have their own visible photographs', async ({page:p})=>{
+  await p.goto('/restaurants/the-garri-bowl');
+  await p.getByRole('link',{name:/Soaked Garri with Groundnuts/}).first().click();
+  await expect(p.locator('h1')).toHaveText('Soaked Garri with Groundnuts');
+  await p.goto('/categories/pizza');
+  const images=p.locator('.cardpic img');
+  await expect(images).toHaveCount(6);
+  const urls=await images.evaluateAll(els=>els.map(el=>el.src));
+  expect(new Set(urls).size).toBe(6);
+  for(const img of await images.all()){await img.scrollIntoViewIfNeeded();await expect.poll(()=>img.evaluate(el=>el.naturalWidth)).toBeGreaterThan(0);}
+  await p.getByRole('link',{name:'Explore Margherita Pizza',exact:true}).click();
+  await expect(p.locator('h1')).toHaveText('Margherita Pizza');
+});

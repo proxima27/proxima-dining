@@ -1,0 +1,236 @@
+{
+  "cuisines": {},
+  "categories": {
+    "Swallows": [
+      "Eba, amala and other soft accompaniments made for scooping up soup.",
+      "journal-the-garri-bowl-yellow-eba-egusi-soup"
+    ],
+    "Pizza": [
+      "Explore the oven: blistered crusts, bright tomatoes and toppings from basil to spicy salami.",
+      "journal-forno-delle-due-corti-margherita-pizza"
+    ]
+  },
+  "venues": [
+    {
+      "name": "Ugba & Clay",
+      "city": "Enugu",
+      "country_code": "NG",
+      "country": "Nigeria",
+      "cuisine": "Nigerian",
+      "currency": "NGN",
+      "price_category": "$$",
+      "cover": "enugu-room",
+      "description": "The first plate out of this Enugu kitchen is often abacha, dressed just before it reaches the table. A short menu pairs cassava and yam with the familiar flavours of oha leaves, utazi and ugba.",
+      "items": [
+        {
+          "name": "Abacha & Ugba",
+          "category": "Salads",
+          "price": "5500",
+          "image": "journal-ugba-clay-abacha-ugba",
+          "description": "Fine ribbons of cassava are softened and tossed with sliced oil bean, palm oil and pepper, then finished with onion."
+        },
+        {
+          "name": "Oha Soup",
+          "category": "Soups",
+          "price": "7200",
+          "image": "journal-ugba-clay-oha-soup",
+          "description": "Tender oha leaves go into the pot at the last moment, after cocoyam has thickened the stock."
+        },
+        {
+          "name": "Ofe Nsala",
+          "category": "Soups",
+          "price": "8500",
+          "image": "journal-ugba-clay-ofe-nsala",
+          "description": "A pale yam-thickened broth with fish and fragrant spices; its depth comes from the stock rather than palm oil."
+        },
+        {
+          "name": "Peppered Yam Porridge",
+          "category": "Main courses",
+          "price": "5200",
+          "image": "journal-ugba-clay-peppered-yam-porridge",
+          "description": "Chunks of yam simmer in a red pepper and palm oil base until the edges break down and thicken the pot."
+        },
+        {
+          "name": "Steamed Okpa",
+          "category": "Breakfast",
+          "price": "1800",
+          "image": "journal-ugba-clay-steamed-okpa",
+          "description": "Bambara groundnut flour, palm oil and pepper are mixed into a batter and steamed until just set."
+        },
+        {
+          "name": "Nkwobi with Utazi",
+          "category": "Starters",
+          "price": "6800",
+          "image": "journal-ugba-clay-nkwobi-with-utazi",
+          "description": "Tender pieces of cow foot are folded through a spiced palm oil dressing and topped with thin-cut utazi and onion."
+        }
+      ]
+    },
+    {
+      "name": "Waterleaf Courtyard",
+      "city": "Calabar",
+      "country_code": "NG",
+      "country": "Nigeria",
+      "cuisine": "Nigerian",
+      "currency": "NGN",
+      "price_category": "$$",
+      "cover": "calabar-room",
+      "description": "The greens get as much attention as the stock in this Calabar kitchen. Finely sliced afang, soft waterleaf and bundles of grated cocoyam give each pot its own texture.",
+      "items": [
+        {
+          "name": "Afang Soup",
+          "category": "Soups",
+          "price": "7500",
+          "image": "journal-waterleaf-courtyard-afang-soup",
+          "description": "Finely cut afang leaves and waterleaf cook down in a rich stock seasoned with crayfish and palm oil."
+        },
+        {
+          "name": "Edikang Ikong",
+          "category": "Soups",
+          "price": "7800",
+          "image": "journal-waterleaf-courtyard-edikang-ikong",
+          "description": "Fluted pumpkin leaves and waterleaf are folded through a concentrated meat stock with dried fish."
+        },
+        {
+          "name": "Ekpang Nkukwo",
+          "category": "Main courses",
+          "price": "7200",
+          "image": "journal-waterleaf-courtyard-ekpang-nkukwo",
+          "description": "Grated cocoyam is rolled into small leaf parcels and gently simmered with palm oil, crayfish and stock."
+        },
+        {
+          "name": "Bole & Grilled Fish",
+          "category": "Seafood",
+          "price": "8600",
+          "image": "journal-waterleaf-courtyard-bole-grilled-fish",
+          "description": "Roasted plantain and smoky grilled fish come with a spoonful of pepper sauce for dipping."
+        },
+        {
+          "name": "Catfish Pepper Soup",
+          "category": "Soups",
+          "price": "6900",
+          "image": "journal-waterleaf-courtyard-catfish-pepper-soup",
+          "description": "Thick cuts of catfish are poached in a fragrant pepper-spiced broth and finished with fresh herbs."
+        },
+        {
+          "name": "Coconut Rice",
+          "category": "Main courses",
+          "price": "4900",
+          "image": "journal-waterleaf-courtyard-coconut-rice",
+          "description": "Rice absorbs coconut milk as it cooks, leaving soft grains scented with fresh coconut."
+        }
+      ]
+    },
+    {
+      "name": "The Garri Bowl",
+      "city": "Ibadan",
+      "country_code": "NG",
+      "country": "Nigeria",
+      "cuisine": "Nigerian",
+      "currency": "NGN",
+      "price_category": "$$",
+      "cover": "journal-the-garri-bowl-room",
+      "description": "Cold water turns toasted cassava into a cooling snack; hot water turns it into eba for scooping up soup. This Ibadan table serves garri both ways, alongside soft amala and warm puff-puff.",
+      "items": [
+        {
+          "name": "Soaked Garri with Groundnuts",
+          "category": "Breakfast",
+          "price": "2200",
+          "image": "journal-the-garri-bowl-soaked-garri-with-groundnuts",
+          "description": "Crunchy Ijebu garri softens in ice-cold water with milk and a little sugar. Roasted groundnuts add crunch between spoonfuls."
+        },
+        {
+          "name": "Yellow Eba & Egusi Soup",
+          "category": "Swallows",
+          "price": "6500",
+          "image": "journal-the-garri-bowl-yellow-eba-egusi-soup",
+          "description": "Yellow garri is stirred into hot water to form smooth eba. Pinch off a piece to scoop up the ground melon seed and leafy vegetable soup."
+        },
+        {
+          "name": "Amala with Ewedu & Gbegiri",
+          "category": "Swallows",
+          "price": "5900",
+          "image": "journal-the-garri-bowl-amala-with-ewedu-gbegiri",
+          "description": "Soft yam-flour amala meets silky jute leaves, creamy bean soup and a spoonful of red pepper stew."
+        },
+        {
+          "name": "Ofada Rice & Ayamase",
+          "category": "Main courses",
+          "price": "6900",
+          "image": "journal-the-garri-bowl-ofada-rice-ayamase",
+          "description": "A mound of fragrant Ofada rice accompanies a bold green pepper stew with tender pieces of meat."
+        },
+        {
+          "name": "Steamed Moi Moi",
+          "category": "Starters",
+          "price": "2600",
+          "image": "journal-the-garri-bowl-steamed-moi-moi",
+          "description": "Peeled beans are blended with red pepper and steamed into a savoury pudding, soft enough to cut with a spoon."
+        },
+        {
+          "name": "Warm Puff-Puff",
+          "category": "Desserts",
+          "price": "1900",
+          "image": "journal-the-garri-bowl-warm-puff-puff",
+          "description": "Yeasted dough is dropped by the spoonful into hot oil, making little rounds with a golden skin and airy centre."
+        }
+      ]
+    },
+    {
+      "name": "Forno delle Due Corti",
+      "city": "Naples",
+      "country_code": "IT",
+      "country": "Italy",
+      "cuisine": "Italian",
+      "currency": "EUR",
+      "price_category": "$$",
+      "cover": "journal-forno-delle-due-corti-room",
+      "description": "A bench for stretching dough, a wood-fired oven and a short list of toppings: this Naples pizzeria keeps the crust at the centre of the plate.",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "category": "Pizza",
+          "price": "10.50",
+          "image": "journal-forno-delle-due-corti-margherita-pizza",
+          "description": "Tomato, mozzarella and fresh basil sit inside a blistered rim, with a little olive oil added after baking."
+        },
+        {
+          "name": "Pizza Marinara",
+          "category": "Pizza",
+          "price": "8.50",
+          "image": "journal-forno-delle-due-corti-pizza-marinara",
+          "description": "A thin layer of tomato is scattered with sliced garlic and oregano before the dough meets the oven floor."
+        },
+        {
+          "name": "Mushroom & Olive Pizza",
+          "category": "Pizza",
+          "price": "12.50",
+          "image": "journal-forno-delle-due-corti-mushroom-olive-pizza",
+          "description": "Earthy sliced mushrooms and olives nestle into melted mozzarella on a lightly charred base."
+        },
+        {
+          "name": "Quattro Formaggi Pizza",
+          "category": "Pizza",
+          "price": "14.00",
+          "image": "journal-forno-delle-due-corti-quattro-formaggi-pizza",
+          "description": "Four cheeses melt into one another across the dough, from creamy mozzarella to sharp blue cheese."
+        },
+        {
+          "name": "Diavola Pizza",
+          "category": "Pizza",
+          "price": "13.50",
+          "image": "journal-forno-delle-due-corti-diavola-pizza",
+          "description": "Spicy salami curls at the edges in the oven over tomato and bubbling mozzarella."
+        },
+        {
+          "name": "Prosciutto & Rucola Pizza",
+          "category": "Pizza",
+          "price": "15.50",
+          "image": "journal-forno-delle-due-corti-prosciutto-rucola-pizza",
+          "description": "The baked base is finished with folds of prosciutto, fresh rocket and shavings of hard cheese."
+        }
+      ]
+    }
+  ],
+  "extras": {}
+}

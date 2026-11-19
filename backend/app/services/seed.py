@@ -7,6 +7,7 @@ from app.database.connection import Session
 from app.models.catalog import Category, Cuisine, Item, Restaurant, RestaurantImage
 from app.models.settings import Setting
 from app.services.expand_catalogue import expand
+from app.services.regional_collection import add_regional_collection
 
 slug = lambda text: re.sub("[^a-z0-9]+", "-", text.lower()).strip("-")
 photo = lambda k: "/images/" + k + ".jpg"
@@ -278,6 +279,7 @@ def seed():
                     )
                 )
         expand(db)
+        add_regional_collection(db)
         if not db.query(Setting).count():
             db.add(
                 Setting(

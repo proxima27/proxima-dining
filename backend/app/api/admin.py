@@ -192,6 +192,15 @@ def install(key, model, schema):
         )
 
     def save(data, db, x):
+        if model == Item and data.image_url:
+            other = db.query(Item.id).filter(Item.image_url == data.image_url)
+            if x.id is not None:
+                other = other.filter(Item.id != x.id)
+            if other.first():
+                raise HTTPException(
+                    409,
+                    "Another dish already uses this photo. Choose a different dish photo.",
+                )
         for k, v in data.model_dump(exclude={"tags", "cuisine_ids", "hours"}).items():
             setattr(x, k, v)
         if model == Restaurant:
