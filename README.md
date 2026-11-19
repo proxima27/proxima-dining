@@ -9,7 +9,7 @@
 - **`/admin`** — development-only staff login: **admin / admin123**. Create a restaurant, assign its cuisine, check **Published**, save, and search its name in the public directory. **Featured** controls the curated homepage collection. The first three featured records populate the spotlight; the fourth supplies the editor’s selection.
 - **`/docs`** — the preview proxies to the backend Swagger UI. **`/api/v1/health`** checks database connectivity, not just process liveness.
 
-The sample contains **24 fictional restaurants, 13 cuisines, 11 categories and 144 individually illustrated dishes**. Images and prices are illustrative. Unknown hours, addresses, coordinates and allergen details are not invented. No customer accounts, reservations, orders, payments or user reviews exist.
+The sample contains **24 fictional restaurants, 13 cuisines, 14 categories and 168 individually illustrated dishes**. Images and prices are illustrative. Unknown hours, addresses, coordinates and allergen details are not invented. No customer accounts, reservations, orders, payments or user reviews exist.
 
 ## Repository
 
@@ -83,3 +83,7 @@ Verified in the workspace: real MySQL 8.4, Python 3.13, migrated schema, 18 back
 **Staff contact inbox:** after a visitor submits `/contact`, the message is stored in MySQL. Sign in at `/admin` and choose **Contact messages** (`/admin/messages`). The unread badge and active inbox check for changes every ten seconds; **Refresh inbox** checks immediately. Opening a message marks it read. These messages are private to staff and are not forwarded to email.
 
 **Regional menu edition:** find chilled garri, eba and amala at The Garri Bowl (Ibadan), soups and seafood at Waterleaf Courtyard (Calabar), and abacha and okpa at Ugba & Clay (Enugu). Forno delle Due Corti (Naples) adds six pizzas. Each demo dish uses a separate photograph. The admin editor rejects an image URL already assigned to another menu item. Photo licences and source links are available from the footer. To apply only this edition to a database with the first two collections already installed, run `python -m app.services.regional_collection` inside `backend/`.
+
+**Grill and pantry edition:** browse Steaks & Grills, Biscuits, and Fried Rice in Categories, or search “Indomie” for five noodle preparations. The edition also adds five Nigerian soups and three desserts. Every dish has its own photo.
+
+**Footer buttons:** open `/admin/settings`, enter the HTTPS address for GitHub, WhatsApp, Discord, Website, Instagram or Facebook, choose **Show in footer** for that channel, and select **Save settings**. Hidden URLs remain saved privately and are omitted from the public settings response. No service login or messaging integration is needed.

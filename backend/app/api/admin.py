@@ -1,4 +1,5 @@
 import io
+import json
 import os
 import re
 from typing import Literal
@@ -33,6 +34,7 @@ from app.schemas.content import (
     SettingData,
 )
 from app.services.catalog import card, one, row
+from app.services.footer import footer_links
 
 api = APIRouter(prefix="/api/v1/admin", dependencies=[Depends(authorized)])
 D = Depends(db_session)
@@ -63,12 +65,17 @@ def stats(db=D):
 
 @api.get("/settings")
 def settings(db=D):
-    return {s.setting_key: s.setting_value for s in db.query(Setting)}
+    values = {s.setting_key: s.setting_value for s in db.query(Setting)}
+    return {**values, "footer_links": footer_links(values)}
 
 
 @api.put("/settings")
 def write_settings(data: SettingData, db=D):
-    for k, v in data.model_dump().items():
+    for k, v in data.model_dump(exclude_unset=True).items():
+        if k == "footer_links":
+            if v is None:
+                continue
+            v = json.dumps({**settings(db)["footer_links"], **v})
         s = db.query(Setting).filter_by(setting_key=k).first()
         if not s:
             s = Setting(setting_key=k)

@@ -1,0 +1,238 @@
+{
+  "cuisines": {},
+  "categories": {
+    "Steaks & Grills": [
+      "Pepper-crusted steaks, charcoal-grilled beef and skewers seasoned with yaji.",
+      "table-chargrilled-ribeye-steak"
+    ],
+    "Biscuits": [
+      "From crisp tea biscuits to flaky, buttery breakfast bakes.",
+      "table-butter-shortbread-biscuits"
+    ],
+    "Fried Rice": [
+      "Rice from the wok and frying pan, from Nigerian party rice to spring onion and egg.",
+      "table-spring-onion-egg-fried-rice"
+    ]
+  },
+  "venues": [],
+  "extras": {
+    "the-burger-house": [
+      {
+        "name": "Chargrilled Ribeye Steak",
+        "category": "Steaks & Grills",
+        "price": "34.50",
+        "image": "table-chargrilled-ribeye-steak",
+        "description": "A ribeye seared over high heat until the fat at its edges turns crisp, served with charred asparagus.",
+        "is_featured": true
+      },
+      {
+        "name": "Buttermilk Biscuits",
+        "category": "Biscuits",
+        "price": "6.50",
+        "image": "table-buttermilk-biscuits",
+        "description": "Cold butter folded into the dough gives these American breakfast biscuits their flaky layers.",
+        "is_featured": false
+      }
+    ],
+    "maison-laurent": [
+      {
+        "name": "Steak au Poivre",
+        "category": "Steaks & Grills",
+        "price": "32",
+        "image": "table-steak-au-poivre",
+        "description": "Crushed peppercorns form a crust on the beef; cream and pan juices soften their bite in the sauce.",
+        "is_featured": false
+      }
+    ],
+    "ember-court": [
+      {
+        "name": "Yaji-Rubbed Sirloin Steak",
+        "category": "Steaks & Grills",
+        "price": "16500",
+        "image": "table-yaji-rubbed-sirloin-steak",
+        "description": "A sirloin rubbed with house yaji, rested after grilling and plated with crisp potato wedges.",
+        "is_featured": false
+      },
+      {
+        "name": "Beef Suya Skewers",
+        "category": "Steaks & Grills",
+        "price": "5600",
+        "image": "table-beef-suya-skewers",
+        "description": "Thin strips of beef take a groundnut-and-spice coating before a quick turn over hot coals.",
+        "is_featured": false
+      },
+      {
+        "name": "Chilli Mi Goreng Indomie",
+        "category": "Noodles",
+        "price": "3900",
+        "image": "table-chilli-mi-goreng-indomie",
+        "description": "Dry-style fried noodles tossed with sweet soy, chilli and shallots rather than served in broth.",
+        "is_featured": false
+      },
+      {
+        "name": "Miyan Kuka",
+        "category": "Soups",
+        "price": "6500",
+        "image": "table-miyan-kuka",
+        "description": "Powdered baobab leaves thicken the stock into a smooth, earthy soup, served in the northern Nigerian tradition.",
+        "is_featured": false
+      }
+    ],
+    "saffron-room": [
+      {
+        "name": "Butter Shortbread Biscuits",
+        "category": "Biscuits",
+        "price": "5.50",
+        "image": "table-butter-shortbread-biscuits",
+        "description": "Pale, buttery fingers baked just until their edges colour, with a sandy crumb that melts into tea.",
+        "is_featured": false
+      }
+    ],
+    "copper-ladle-breakfast-club": [
+      {
+        "name": "Ginger Snap Biscuits",
+        "category": "Biscuits",
+        "price": "2400",
+        "image": "table-ginger-snap-biscuits",
+        "description": "Thin biscuits spiced with ground ginger, crisp enough to snap when broken in two.",
+        "is_featured": false
+      },
+      {
+        "name": "Chicken Indomie with Boiled Egg",
+        "category": "Noodles",
+        "price": "3400",
+        "image": "table-chicken-indomie-with-boiled-egg",
+        "description": "Chicken-flavour Indomie cooked until springy, topped with boiled egg and sliced vegetables.",
+        "is_featured": false
+      },
+      {
+        "name": "Onion Chicken Indomie",
+        "category": "Noodles",
+        "price": "3600",
+        "image": "table-onion-chicken-indomie",
+        "description": "Onion Chicken noodles tossed with sweet onions and carrot, with egg added at the table.",
+        "is_featured": true
+      }
+    ],
+    "bella-napoli": [
+      {
+        "name": "Espresso Tiramisu",
+        "category": "Desserts",
+        "price": "8.50",
+        "image": "table-espresso-tiramisu",
+        "description": "Coffee-soaked ladyfingers and mascarpone cream, finished with an unsweetened dusting of cocoa.",
+        "is_featured": false
+      }
+    ],
+    "atelier-du-soir": [
+      {
+        "name": "Molten Chocolate Fondant",
+        "category": "Desserts",
+        "price": "9.50",
+        "image": "table-molten-chocolate-fondant",
+        "description": "A small dark chocolate cake baked to set the edges while the centre stays warm and fluid.",
+        "is_featured": true
+      }
+    ],
+    "the-garri-bowl": [
+      {
+        "name": "Nutmeg Chin Chin",
+        "category": "Desserts",
+        "price": "1800",
+        "image": "table-nutmeg-chin-chin",
+        "description": "Tiny squares of nutmeg-scented dough fried until golden and crunchy, served by the handful.",
+        "is_featured": false
+      },
+      {
+        "name": "Ewedu Soup",
+        "category": "Soups",
+        "price": "2600",
+        "image": "table-ewedu-soup",
+        "description": "Jute leaves are beaten to a silky consistency and seasoned with iru; order a bowl alongside amala.",
+        "is_featured": false
+      }
+    ],
+    "spice-garden": [
+      {
+        "name": "Garden Pepper Indomie",
+        "category": "Noodles",
+        "price": "3800",
+        "image": "table-garden-pepper-indomie",
+        "description": "A house variation: curly noodles stir-fried with sweet peppers, onions and a little fresh chilli.",
+        "is_featured": false
+      },
+      {
+        "name": "Jollof-Style Indomie",
+        "category": "Noodles",
+        "price": "4200",
+        "image": "table-jollof-style-indomie",
+        "description": "The kitchen's tomato-and-pepper base coats the noodles, finished with small pieces of browned liver.",
+        "is_featured": false
+      },
+      {
+        "name": "Nigerian Party Fried Rice",
+        "category": "Fried Rice",
+        "price": "6000",
+        "image": "table-nigerian-party-fried-rice",
+        "description": "Stock-seasoned rice is stir-fried in small batches with diced vegetables and gizzard, then served with chicken.",
+        "is_featured": true
+      }
+    ],
+    "waterleaf-courtyard": [
+      {
+        "name": "Fresh Fish Banga Soup",
+        "category": "Soups",
+        "price": "8500",
+        "image": "table-fresh-fish-banga-soup",
+        "description": "Palm fruit extract forms a deep orange broth. Fresh fish cooks gently in it until tender, ready for scooping up with eba.",
+        "is_featured": false
+      },
+      {
+        "name": "Prawn & Okro Soup",
+        "category": "Soups",
+        "price": "7800",
+        "image": "table-prawn-okro-soup",
+        "description": "Chopped okra thickens the broth while prawns and ground crayfish give it a savoury finish.",
+        "is_featured": false
+      },
+      {
+        "name": "Coconut Fried Rice",
+        "category": "Fried Rice",
+        "price": "6400",
+        "image": "table-coconut-fried-rice",
+        "description": "Rice cooked with coconut milk is cooled, then tossed with diced vegetables until the grains turn glossy.",
+        "is_featured": false
+      }
+    ],
+    "ugba-clay": [
+      {
+        "name": "Ogbono Soup with Beef",
+        "category": "Soups",
+        "price": "7400",
+        "image": "table-ogbono-soup-with-beef",
+        "description": "Ground ogbono seeds give the stock its characteristic draw. Tender beef and cow skin add a contrast in texture.",
+        "is_featured": false
+      }
+    ],
+    "red-pepper-courtyard": [
+      {
+        "name": "Spring Onion Egg Fried Rice",
+        "category": "Fried Rice",
+        "price": "32",
+        "image": "table-spring-onion-egg-fried-rice",
+        "description": "Cooled rice hits a hot wok with soft ribbons of egg and spring onion until the grains separate.",
+        "is_featured": false
+      }
+    ],
+    "tamarind-soi": [
+      {
+        "name": "Prawn Fried Rice",
+        "category": "Fried Rice",
+        "price": "215",
+        "image": "table-wok-fried-prawn-rice",
+        "description": "Prawns are flash-seared before rice and aromatics are tossed through the wok, with lime to finish.",
+        "is_featured": false
+      }
+    ]
+  }
+}

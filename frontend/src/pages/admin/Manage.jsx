@@ -1,3 +1,4 @@
+import { FooterLinkFields } from "../../components/FooterLinks";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus, Trash2, PenLine, MailOpen } from "lucide-react";
@@ -155,18 +156,21 @@ export function Settings() {
   const r = useData("/admin/settings"),
     { mutate } = useStaff(),
     [msg, M] = useState("");
+  const [links, setLinks] = useState(null), [busy, setBusy] = useState(false);
   async function submit(e) {
     e.preventDefault();
     const v = Object.fromEntries(new FormData(e.currentTarget));
+    setBusy(true); M("");
     try {
       await mutate("put", "settings", {
         ...v,
+        footer_links: links ?? r.data.footer_links,
         contact_email: v.contact_email || null,
       });
       M("Settings saved.");
     } catch (e) {
       M(errText(e));
-    }
+    } finally { setBusy(false); }
   }
   return (
     <>
@@ -183,8 +187,6 @@ export function Settings() {
             ["footer_text", "Footer text", ""],
             ["contact_email", "Editorial email", ""],
             ["logo_url", "Logo image URL", ""],
-            ["instagram_url", "Instagram URL", ""],
-            ["facebook_url", "Facebook URL", ""],
           ].map(([k, n, d]) => (
             <label key={k}>
               {n}
@@ -195,7 +197,8 @@ export function Settings() {
               />
             </label>
           ))}
-          <button className="gold">Save settings</button>
+          <FooterLinkFields links={links ?? r.data.footer_links ?? {}} onChange={setLinks}/>
+          <button className="gold" disabled={busy}>{busy ? "Saving…" : "Save settings"}</button>
           <p role="status">{msg}</p>
         </form>
       ) : (

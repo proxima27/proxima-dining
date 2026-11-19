@@ -61,7 +61,7 @@ def expand(db, collection="catalogue_expansion.json", category_offset=5):
                     price=Decimal(dish["price"]),
                     currency=currency,
                     is_published=True,
-                    is_featured=feature_first and i == 0,
+                    is_featured=dish.get("is_featured", feature_first and i == 0),
                 )
             )
 

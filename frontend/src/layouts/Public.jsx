@@ -1,3 +1,4 @@
+import {FooterLinks} from "../components/FooterLinks";
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Search, Heart, Sun, Moon, Menu, X } from "lucide-react";
@@ -80,20 +81,10 @@ export function Public() {
           <div>
             <Brand logo={r.data?.logo_url} />
             <p>{r.data?.footer_text}</p>
+            <FooterLinks links={r.data?.footer_links}/>
           </div>
           <div className="footlinks">
             <a href="/photo-credits.html">Photo credits</a>
-            {[
-              ["instagram_url", "Instagram"],
-              ["facebook_url", "Facebook"],
-            ].map(
-              ([k, label]) =>
-                r.data?.[k] && (
-                  <a key={k} href={r.data[k]} rel="noreferrer" target="_blank">
-                    {label}
-                  </a>
-                ),
-            )}
             {r.data?.contact_email && (
               <a href={"mailto:" + r.data.contact_email}>Email</a>
             )}

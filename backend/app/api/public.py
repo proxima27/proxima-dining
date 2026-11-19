@@ -21,6 +21,7 @@ from app.schemas.public import (
     Spotlight,
 )
 from app.services.catalog import card, matched, one, public, row
+from app.services.footer import public_settings
 
 api = APIRouter(prefix="/api/v1")
 D = Depends(db_session)
@@ -266,19 +267,5 @@ def unsubscribe(data: Email, request: Request, db=D):
 
 @api.get("/settings")
 def settings(db=D):
-    return {
-        x.setting_key: x.setting_value
-        for x in db.query(Setting).filter(
-            Setting.setting_key.in_(
-                [
-                    "footer_text",
-                    "website_title",
-                    "website_description",
-                    "contact_email",
-                    "logo_url",
-                    "instagram_url",
-                    "facebook_url",
-                ]
-            )
-        )
-    }
+    values = {record.setting_key: record.setting_value for record in db.query(Setting)}
+    return public_settings(values)

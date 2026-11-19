@@ -317,3 +317,62 @@ def test_reused_dish_photo_rejected(staff):
         },
     )
     assert r.status_code == 409
+
+
+def test_footer_switches_and_private_drafts(staff, state):
+    links = {
+        "github": {"url": "https://github.com/example", "visible": True},
+        "whatsapp": {"url": "https://wa.me/123456789", "visible": False},
+        "discord": {"url": "https://discord.gg/example", "visible": True},
+        "website": {"url": "https://example.org/", "visible": False},
+    }
+
+    def save(v):
+        return staff.put(
+            A + "/settings", json={"footer_text": "Test footer", "footer_links": v}
+        )
+
+    def published():
+        return state[0].get(P + "/settings").json()
+
+    assert save(links).status_code == 200
+    first = published()
+    assert (
+        first["footer_links"]["github"] == links["github"]["url"]
+        and "whatsapp" not in first["footer_links"]
+        and "website" not in first["footer_links"]
+    )
+    assert "https://wa.me/123456789" not in str(first)
+    assert (
+        staff.get(A + "/settings").json()["footer_links"]["whatsapp"]
+        == links["whatsapp"]
+    )
+    assert (
+        save(
+            {
+                "github": {**links["github"], "visible": False},
+                "website": {**links["website"], "visible": True},
+            }
+        ).status_code
+        == 200
+    )
+    active = published()["footer_links"]
+    assert (
+        "github" not in active
+        and active["website"] == links["website"]["url"]
+        and active["discord"] == links["discord"]["url"]
+    )
+    assert save({"github": {"url": "", "visible": True}}).status_code == 422
+    assert (
+        save({"website": {"url": "javascript:alert(1)", "visible": True}}).status_code
+        == 422
+    )
+    assert not staff.get(A + "/settings").json()["footer_links"]["github"]["visible"]
+
+
+def test_grill_and_pantry_search(state):
+    c, _ = state
+    for q in ("Indomie", "ribeye", "biscuits", "banga", "fried rice"):
+        assert c.get(P + "/search", params={"q": q}).json()["dishes"]
+    for cat, n in [("biscuits", 3), ("fried-rice", 4), ("steaks-grills", 4)]:
+        assert c.get(P + "/menu-items", params={"category": cat}).json()["total"] >= n

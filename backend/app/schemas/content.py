@@ -10,6 +10,7 @@ from pydantic import (
     ConfigDict,
     EmailStr,
     Field,
+    HttpUrl,
     field_validator,
     model_validator,
 )
@@ -106,7 +107,43 @@ class DishData(Entry):
         return self
 
 
+class FooterLink(Data):
+    url: str = Field(default="", max_length=1024)
+    visible: bool = False
+
+    @field_validator("url")
+    @classmethod
+    def https_only(cls, value):
+        if not value:
+            return value
+        if (
+            not value.startswith("https://")
+            or "\\" in value
+            or any(c.isspace() or ord(c) < 32 for c in value)
+        ):
+            raise ValueError("Enter a full HTTPS link.")
+        parsed = HttpUrl(value)
+        if not parsed.host or parsed.username or parsed.password:
+            raise ValueError("Use a link with a host and no embedded credentials.")
+        return value
+
+    @model_validator(mode="after")
+    def has_target(self):
+        if self.visible and not self.url:
+            raise ValueError("Add a URL before showing this button.")
+        return self
+
+
 class SettingData(Data):
+    footer_links: (
+        dict[
+            Literal[
+                "github", "whatsapp", "discord", "website", "instagram", "facebook"
+            ],
+            FooterLink,
+        ]
+        | None
+    ) = None
     footer_text: str = Field(max_length=600)
     website_title: str = Field(default="Proxima Dining", min_length=1, max_length=80)
     website_description: str = Field(default="", max_length=320)
