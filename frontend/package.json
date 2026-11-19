@@ -4,7 +4,9 @@
   "scripts": {
     "test": "playwright test",
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "postbuild": "node scripts/image-inventory.mjs",
+    "verify:images": "node scripts/verify-browser-images.mjs"
   },
   "description": "",
   "type": "module",

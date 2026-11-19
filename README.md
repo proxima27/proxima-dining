@@ -89,3 +89,7 @@ Verified in the workspace: real MySQL 8.4, Python 3.13, migrated schema, 18 back
 **Footer buttons:** open `/admin/settings`, enter the HTTPS address for GitHub, WhatsApp, Discord, Website, Instagram or Facebook, choose **Show in footer** for that channel, and select **Save settings**. Hidden URLs remain saved privately and are omitted from the public settings response. No service login or messaging integration is needed.
 
 **Eggs and steaks:** `/categories/eggs` collects 19 egg preparations, including Nigerian egg roll, plantain frittata, yam with egg sauce, çılbır and tamagoyaki. `/categories/steaks-grills` includes 17 additional steak dishes, including porterhouse, tomahawk, flat iron, steak and eggs, lamb and tuna. Additions use the restaurant menu’s currency. Search matches food category names as well as dish names.
+
+## Downloadable media and production build
+
+The source ZIP includes **all 222 catalogue photographs and the SVG favicon** in `frontend/public/`, along with a compiled `frontend/dist/` containing its own local copies. Image URLs are origin-relative and unchanged. Runtime delivery does not require an external image host. Every frontend build now checks image paths and SHA-256 hashes against `frontend/image-manifest.json`. See [the image-bundle guide](docs/IMAGE-BUNDLE.md) for independent verification, hosting and media-update instructions.

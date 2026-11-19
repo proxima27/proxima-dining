@@ -27,3 +27,6 @@ Added 24 MySQL menu items across existing restaurants, including five Indomie pr
 
 ## Egg and steak menus
 Added 19 egg dishes and 17 steak dishes to existing restaurants, with a dedicated Eggs category and individual credited images. The new steak records include distinct cuts, preparations, a steak-and-eggs breakfast, and explicitly labelled lamb and tuna steaks. Two consecutive imports left 204 dishes in 24 restaurants across 15 categories. All 23 backend tests passed, including checks for unique images, category/search discovery, and the combined dish. Chromium checks opened both category pages and followed Ember Court's menu to the tomahawk steak detail page.
+
+## Image portability release
+Audited covers, logos, menu items, cuisines, categories, restaurant galleries, dish galleries and site settings. All 304 populated database references resolve to the shipped photographs; no catalogue records required URL changes. Added a release manifest, postbuild integrity check, database audit and production-browser verification. With external requests blocked, Chromium decoded all 223 standalone image files and checked ten routes against the API. See `IMAGE-BUNDLE.md`. The downloadable release contains the compiled static frontend in addition to its rebuildable source.
