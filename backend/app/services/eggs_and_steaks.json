@@ -1,0 +1,338 @@
+{
+  "cuisines": {},
+  "venues": [],
+  "categories": {
+    "Eggs": [
+      "From boiled yam with egg sauce to poached eggs on garlic yoghurt, explore how different kitchens cook the same ingredient.",
+      "skillet-plantain-egg-frittata"
+    ]
+  },
+  "extras": {
+    "copper-ladle-breakfast-club": [
+      {
+        "name": "Sunny-Side Eggs on Toast",
+        "category": "Eggs",
+        "price": "3200",
+        "image": "skillet-sunny-side-eggs-on-toast",
+        "description": "Two eggs fried on one side until the whites set, with golden yolks left intact for the toast.",
+        "is_featured": false
+      },
+      {
+        "name": "Nigerian Egg Roll",
+        "category": "Eggs",
+        "price": "2300",
+        "image": "skillet-nigerian-egg-roll",
+        "description": "A whole boiled egg in a thick coat of lightly sweet dough, fried until golden and cut in half to serve.",
+        "is_featured": false
+      },
+      {
+        "name": "Yaji Steak & Eggs",
+        "category": "Steaks & Grills",
+        "price": "14500",
+        "image": "skillet-yaji-steak-eggs",
+        "description": "Griddled beef with a dusting of yaji and fried eggs. The yolks make a sauce for the sliced steak.",
+        "is_featured": true
+      }
+    ],
+    "the-burger-house": [
+      {
+        "name": "Over-Easy Eggs & Ham",
+        "category": "Eggs",
+        "price": "12.50",
+        "image": "skillet-over-easy-eggs-ham",
+        "description": "The eggs get a quick flip to set the tops of the whites, then slide onto the plate beside griddled ham.",
+        "is_featured": false
+      },
+      {
+        "name": "Classic Eggs Benedict",
+        "category": "Eggs",
+        "price": "17.50",
+        "image": "skillet-classic-eggs-benedict",
+        "description": "Poached eggs and ham on toasted muffin halves, finished with a spoonful of lemony hollandaise.",
+        "is_featured": false
+      },
+      {
+        "name": "Paprika Deviled Eggs",
+        "category": "Eggs",
+        "price": "8.50",
+        "image": "skillet-paprika-deviled-eggs",
+        "description": "Hard-boiled egg halves filled with their own yolks, mustard and mayonnaise, then dusted with paprika.",
+        "is_featured": false
+      },
+      {
+        "name": "New York Strip Steak",
+        "category": "Steaks & Grills",
+        "price": "35",
+        "image": "skillet-new-york-strip-steak",
+        "description": "The strip loin develops a dark crust on the griddle while its strip of fat crisps at the edge.",
+        "is_featured": false
+      },
+      {
+        "name": "Porterhouse Steak for Two",
+        "category": "Steaks & Grills",
+        "price": "68",
+        "image": "skillet-porterhouse-steak-for-two",
+        "description": "A thick porterhouse sliced around the bone so two people can share both the strip and the broad tenderloin.",
+        "is_featured": false
+      },
+      {
+        "name": "Southern Chicken-Fried Steak",
+        "category": "Steaks & Grills",
+        "price": "23",
+        "image": "skillet-southern-chicken-fried-steak",
+        "description": "Tenderised beef, not chicken: the steak is crumbed, fried crisp and served beneath peppered cream gravy.",
+        "is_featured": false
+      }
+    ],
+    "atelier-du-soir": [
+      {
+        "name": "Soft Scrambled Eggs on Toast",
+        "category": "Eggs",
+        "price": "11.50",
+        "image": "skillet-soft-scrambled-eggs-on-toast",
+        "description": "Eggs folded slowly over low heat into small, glossy curds and spooned over toast.",
+        "is_featured": false
+      },
+      {
+        "name": "Hanger Steak with Shallots",
+        "category": "Steaks & Grills",
+        "price": "25",
+        "image": "skillet-hanger-steak-with-shallots",
+        "description": "Onglet, the deeply flavoured hanger cut, seared quickly and served with shallots softened in pan juices.",
+        "is_featured": false
+      }
+    ],
+    "saffron-room": [
+      {
+        "name": "Soft-Boiled Egg & Soldiers",
+        "category": "Eggs",
+        "price": "6.50",
+        "image": "skillet-soft-boiled-egg-soldiers",
+        "description": "A soft-boiled egg served upright with slim fingers of toast for dipping into the yolk.",
+        "is_featured": false
+      },
+      {
+        "name": "Scotch Egg with Mustard",
+        "category": "Eggs",
+        "price": "8.50",
+        "image": "skillet-scotch-egg-with-mustard",
+        "description": "A whole egg wrapped in sausage meat, coated in crumbs and fried, with mustard for dipping.",
+        "is_featured": false
+      },
+      {
+        "name": "Masala Egg Bhurji",
+        "category": "Eggs",
+        "price": "10.50",
+        "image": "skillet-masala-egg-bhurji",
+        "description": "Soft scrambled eggs tossed with onion, tomato, chilli and coriander, with bread for scooping.",
+        "is_featured": false
+      },
+      {
+        "name": "Flat Iron Steak with Cumin Butter",
+        "category": "Steaks & Grills",
+        "price": "26",
+        "image": "skillet-flat-iron-steak-with-cumin-butter",
+        "description": "A shoulder cut seared flat on the grill, sliced into strips and finished with toasted cumin butter.",
+        "is_featured": false
+      }
+    ],
+    "kumo-table": [
+      {
+        "name": "Hard-Boiled Quail Eggs",
+        "category": "Eggs",
+        "price": "620",
+        "image": "skillet-hard-boiled-quail-eggs",
+        "description": "Bite-sized quail eggs served peeled, with a small dish of sesame salt on the side.",
+        "is_featured": false
+      }
+    ],
+    "cumin-copper": [
+      {
+        "name": "Shakshuka Baked Eggs",
+        "category": "Eggs",
+        "price": "145",
+        "image": "skillet-shakshuka-baked-eggs",
+        "description": "Eggs nestle in a skillet of reduced tomato and sweet pepper sauce spiced with cumin.",
+        "is_featured": false
+      }
+    ],
+    "sumac-ember": [
+      {
+        "name": "Çılbır Poached Eggs",
+        "category": "Eggs",
+        "price": "290",
+        "image": "skillet-lb-r-poached-eggs",
+        "description": "Poached eggs over garlicky yoghurt, with warm red pepper butter running into the yolks.",
+        "is_featured": false
+      }
+    ],
+    "sakura-house": [
+      {
+        "name": "Tamagoyaki Rolled Egg Omelette",
+        "category": "Eggs",
+        "price": "850",
+        "image": "skillet-tamagoyaki-rolled-egg-omelette",
+        "description": "Thin sheets of lightly sweetened egg are rolled together in the pan and sliced to show their layers.",
+        "is_featured": false
+      },
+      {
+        "name": "Beef Tataki Steak with Ponzu",
+        "category": "Steaks & Grills",
+        "price": "2600",
+        "image": "skillet-beef-tataki-steak-with-ponzu",
+        "description": "Beef seared on the outside, cooled and sliced thinly, then dressed with citrus ponzu.",
+        "is_featured": false
+      }
+    ],
+    "spice-garden": [
+      {
+        "name": "Plantain & Egg Frittata",
+        "category": "Eggs",
+        "price": "4600",
+        "image": "skillet-plantain-egg-frittata",
+        "description": "Ripe plantain rounds sit on a baked egg base with diced onion and peppers. Served in thick wedges.",
+        "is_featured": true
+      }
+    ],
+    "the-garri-bowl": [
+      {
+        "name": "Boiled Yam & Egg Sauce",
+        "category": "Eggs",
+        "price": "4800",
+        "image": "skillet-boiled-yam-egg-sauce",
+        "description": "Slices of white yam with eggs folded into a tomato, onion and fresh pepper sauce.",
+        "is_featured": false
+      }
+    ],
+    "maison-laurent": [
+      {
+        "name": "Eggs en Cocotte",
+        "category": "Eggs",
+        "price": "12",
+        "image": "skillet-eggs-en-cocotte",
+        "description": "Eggs gently baked in a buttered ramekin with cream; toast is served alongside to catch the last spoonful.",
+        "is_featured": false
+      },
+      {
+        "name": "Filet Mignon Steak",
+        "category": "Steaks & Grills",
+        "price": "39",
+        "image": "skillet-filet-mignon-steak",
+        "description": "A tender centre-cut beef fillet, pan-seared and butter-basted, served on smooth mashed potatoes.",
+        "is_featured": false
+      }
+    ],
+    "olive-salt": [
+      {
+        "name": "Spanish Potato & Egg Tortilla",
+        "category": "Eggs",
+        "price": "10",
+        "image": "skillet-spanish-potato-egg-tortilla",
+        "description": "Thin slices of potato held together with egg in a thick omelette, cut into wedges for the table.",
+        "is_featured": false
+      },
+      {
+        "name": "Seared Tuna Steak",
+        "category": "Steaks & Grills",
+        "price": "25",
+        "image": "skillet-seared-tuna-steak",
+        "description": "A thick cut of tuna takes a quick sear on the grill and a squeeze of lemon, with a baked potato alongside.",
+        "is_featured": false
+      }
+    ],
+    "red-pepper-courtyard": [
+      {
+        "name": "Egg Foo Young",
+        "category": "Eggs",
+        "price": "38",
+        "image": "skillet-egg-foo-young",
+        "description": "Eggs, sliced vegetables and bean sprouts fried into tender patties with browned edges.",
+        "is_featured": false
+      }
+    ],
+    "tamarind-soi": [
+      {
+        "name": "Crisp Duck Egg with Basil Squid",
+        "category": "Eggs",
+        "price": "210",
+        "image": "skillet-crisp-duck-egg-with-basil-squid",
+        "description": "A duck egg with a lacy fried edge tops rice and basil-scented squid. Break the yolk over the hot grains.",
+        "is_featured": false
+      }
+    ],
+    "ember-court": [
+      {
+        "name": "Charcoal T-Bone Steak",
+        "category": "Steaks & Grills",
+        "price": "22500",
+        "image": "skillet-charcoal-t-bone-steak",
+        "description": "Strip loin and tenderloin meet on opposite sides of the T-shaped bone. Grilled over charcoal and carved at the table.",
+        "is_featured": false
+      },
+      {
+        "name": "Long-Bone Tomahawk Steak",
+        "category": "Steaks & Grills",
+        "price": "32000",
+        "image": "skillet-long-bone-tomahawk-steak",
+        "description": "A bone-in ribeye grilled over embers, rested whole and sliced across the eye for sharing.",
+        "is_featured": true
+      },
+      {
+        "name": "Sea Salt Picanha Steak",
+        "category": "Steaks & Grills",
+        "price": "17800",
+        "image": "skillet-sea-salt-picanha-steak",
+        "description": "Rump cap grilled with its layer of fat intact and sliced across the grain, with coarse salt at the table.",
+        "is_featured": false
+      },
+      {
+        "name": "Pepper-Crusted Rump Steak",
+        "category": "Steaks & Grills",
+        "price": "15500",
+        "image": "skillet-pepper-crusted-rump-steak",
+        "description": "Lean rump steak pressed into cracked pepper before grilling, with a spoonful of pan juices.",
+        "is_featured": false
+      }
+    ],
+    "casa-verde": [
+      {
+        "name": "Skirt Steak with Green Herb Sauce",
+        "category": "Steaks & Grills",
+        "price": "295",
+        "image": "skillet-skirt-steak-with-green-herb-sauce",
+        "description": "A thin skirt steak grilled over high heat and sliced against the grain, with a sharp herb dressing.",
+        "is_featured": false
+      }
+    ],
+    "maiz-de-patio": [
+      {
+        "name": "Citrus-Grilled Flank Steak",
+        "category": "Steaks & Grills",
+        "price": "285",
+        "image": "skillet-citrus-grilled-flank-steak",
+        "description": "Flank steak takes a citrus marinade before grilling; thin slices are served with warm tortillas.",
+        "is_featured": false
+      }
+    ],
+    "cortile-rosso": [
+      {
+        "name": "Florentine T-Bone Steak",
+        "category": "Steaks & Grills",
+        "price": "56",
+        "image": "skillet-florentine-t-bone-steak",
+        "description": "A thick bistecca alla fiorentina cooked over coals, seasoned simply and carved off the bone for sharing.",
+        "is_featured": false
+      }
+    ],
+    "lemon-quay": [
+      {
+        "name": "Rosemary Lamb Leg Steak",
+        "category": "Steaks & Grills",
+        "price": "24",
+        "image": "skillet-rosemary-lamb-leg-steak",
+        "description": "A lamb leg steak brushed with rosemary and olive oil, charred at the edges and served with lemon.",
+        "is_featured": false
+      }
+    ]
+  }
+}

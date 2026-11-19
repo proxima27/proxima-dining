@@ -376,3 +376,29 @@ def test_grill_and_pantry_search(state):
         assert c.get(P + "/search", params={"q": q}).json()["dishes"]
     for cat, n in [("biscuits", 3), ("fried-rice", 4), ("steaks-grills", 4)]:
         assert c.get(P + "/menu-items", params={"category": cat}).json()["total"] >= n
+
+
+def test_egg_and_steak_collection(state):
+    c, _ = state
+    eggs = c.get(P + "/menu-items", params={"category": "eggs", "size": 40}).json()
+    assert eggs["total"] >= 19
+    assert {i["name"] for i in eggs["items"]} >= {
+        "Nigerian Egg Roll",
+        "Boiled Yam & Egg Sauce",
+        "Classic Eggs Benedict",
+        "Tamagoyaki Rolled Egg Omelette",
+    }
+    assert "Nigerian Egg Roll" in {
+        x["name"] for x in c.get(P + "/search?q=eggs").json()["dishes"]
+    }
+    steaks = c.get(
+        P + "/menu-items", params={"category": "steaks-grills", "size": 40}
+    ).json()
+    assert {i["name"] for i in steaks["items"]} >= {
+        "Long-Bone Tomahawk Steak",
+        "New York Strip Steak",
+        "Chargrilled Ribeye Steak",
+        "Yaji Steak & Eggs",
+    }
+    combo = c.get(P + "/menu-items/copper-ladle-breakfast-club-yaji-steak-eggs").json()
+    assert combo["currency"] == "NGN" and combo["category"] == "Steaks & Grills"

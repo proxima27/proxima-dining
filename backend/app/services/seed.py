@@ -281,6 +281,7 @@ def seed():
         expand(db)
         add_regional_collection(db)
         expand(db, collection="grill_and_pantry.json", category_offset=11)
+        expand(db, collection="eggs_and_steaks.json", category_offset=14)
         if not db.query(Setting).count():
             db.add(
                 Setting(

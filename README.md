@@ -9,7 +9,7 @@
 - **`/admin`** — development-only staff login: **admin / admin123**. Create a restaurant, assign its cuisine, check **Published**, save, and search its name in the public directory. **Featured** controls the curated homepage collection. The first three featured records populate the spotlight; the fourth supplies the editor’s selection.
 - **`/docs`** — the preview proxies to the backend Swagger UI. **`/api/v1/health`** checks database connectivity, not just process liveness.
 
-The sample contains **24 fictional restaurants, 13 cuisines, 14 categories and 168 individually illustrated dishes**. Images and prices are illustrative. Unknown hours, addresses, coordinates and allergen details are not invented. No customer accounts, reservations, orders, payments or user reviews exist.
+The sample contains **24 fictional restaurants, 13 cuisines, 15 categories and 204 individually illustrated dishes**. Images and prices are illustrative. Unknown hours, addresses, coordinates and allergen details are not invented. No customer accounts, reservations, orders, payments or user reviews exist.
 
 ## Repository
 
@@ -87,3 +87,5 @@ Verified in the workspace: real MySQL 8.4, Python 3.13, migrated schema, 18 back
 **Grill and pantry edition:** browse Steaks & Grills, Biscuits, and Fried Rice in Categories, or search “Indomie” for five noodle preparations. The edition also adds five Nigerian soups and three desserts. Every dish has its own photo.
 
 **Footer buttons:** open `/admin/settings`, enter the HTTPS address for GitHub, WhatsApp, Discord, Website, Instagram or Facebook, choose **Show in footer** for that channel, and select **Save settings**. Hidden URLs remain saved privately and are omitted from the public settings response. No service login or messaging integration is needed.
+
+**Eggs and steaks:** `/categories/eggs` collects 19 egg preparations, including Nigerian egg roll, plantain frittata, yam with egg sauce, çılbır and tamagoyaki. `/categories/steaks-grills` includes 17 additional steak dishes, including porterhouse, tomahawk, flat iron, steak and eggs, lamb and tuna. Additions use the restaurant menu’s currency. Search matches food category names as well as dish names.

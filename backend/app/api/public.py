@@ -206,7 +206,13 @@ def search(q: str = Query(..., min_length=1, max_length=160), db=D):
         "dishes": [
             card(x)
             for x in public(db, Item)
-            .filter(or_(matched(q), Item.name.ilike(p)))
+            .filter(
+                or_(
+                    matched(q),
+                    Item.name.ilike(p),
+                    Item.category.has(Category.name.ilike(p)),
+                )
+            )
             .limit(30)
         ],
         "destinations": [
