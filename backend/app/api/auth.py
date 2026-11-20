@@ -50,7 +50,7 @@ def login(data: Login, req: Request, response: Response, db=Depends(db_session))
         max_age=minutes * 60,
         httponly=True,
         secure=PROD,
-        samesite="lax",
+        samesite="none" if PROD else "lax",samesite="none" if PROD else "lax",
         path="/api/v1/admin",
     )
     response.headers["Cache-Control"] = "no-store"
